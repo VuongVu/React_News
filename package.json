@@ -1,5 +1,5 @@
 {
-  "name": "next-hn",
+  "name": "next-news",
   "version": "1.0.0",
   "description": "Hacker News build in Next.js",
   "main": "server.js",
@@ -23,5 +23,16 @@
   },
   "devDependencies": {
     "eslint": "^4.1.1"
-  }
+  },
+  "engines": {
+    "node": "8.0.0",
+    "npm": "5.0.0",
+    "yarn": "0.24.5"
+  },
+  "now": {
+    "engines": {
+      "node": "8.1.2"
+    }
+  },
+  "homepage": "https://next-hn-tkmnpmlcwl.now.sh"
 }

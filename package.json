@@ -1,0 +1,27 @@
+{
+  "name": "next-hn",
+  "version": "1.0.0",
+  "description": "Hacker News build in Next.js",
+  "main": "server.js",
+  "author": "Vuong Vu <vuongvu333@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^1.21.0",
+    "mongodb": "^2.2.29",
+    "mongoose": "^4.11.0",
+    "next": "^2.4.5",
+    "nprogress": "^0.2.0",
+    "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "styled-jsx": "^1.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.1.1"
+  }
+}

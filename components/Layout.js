@@ -1,22 +1,34 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Meta from './Meta';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-export default ({ children }) => (
-  <div>
-    <Meta />
-    <Navbar />
+export default class Layout extends Component {
+  render() {
+    const { children } = this.props;
 
-    <div className="content-wrapper">
-      { children }
-    </div>
+    return (
+      <div>
+        <Meta />
+        <Navbar />
 
-    <Footer />
+        <div className="content-wrapper">
+          { children }
+        </div>
 
-    <style jsx>{`
-      .content-wrapper {
-        margin-top: 50px;
-      }
-    `}</style>
-  </div>
-);
+        <Footer />
+
+        <style jsx>{`
+          .content-wrapper {
+            margin-top: 50px;
+          }
+        `}</style>
+      </div>
+    );
+  }
+}
+
+Layout.propTypes = {
+  children: PropTypes.node
+};

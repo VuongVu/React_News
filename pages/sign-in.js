@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import FormLayout from '../components/Form/Authenticate/FormLayout';
+import Header from '../components/Form/Authenticate/Header';
+import Input from '../components/Form/Authenticate/Input';
+import Avatar from '../components/Form/Authenticate/Avatar';
+import Button from '../components/Form/Authenticate/Button';
 
 export default class extends Component {
   render() {
@@ -11,79 +16,36 @@ export default class extends Component {
         </Head>
 
         <Layout>
-          <div className="sign-in-modal">
-            <div className="middle">
-              <div className="avatar">
-                <img src="/static/images/flower-heart-love-romance.png" alt="avatar"/>
-              </div>
-              <div className="pt-card pt-elevation-1 pt-interactive modal-content">
-                <h2 className="text-center">Sign in to Life Story</h2>    
-                <p className="text-center pt-ui-text-large">Enter your username and password to log on</p>          
-                <div className="pt-form-group">
-                  <label className="pt-label">Username</label>
-                  <div className="pt-form-content">
-                    <div className="pt-input-group">
-                      <span className="pt-icon pt-icon-person"></span>
-                      <input className="pt-input" type="text" dir="auto"/>
-                    </div>
-                    <div className="pt-form-helper-text">This is your username.</div>
-                  </div>
-                </div>
-                <div className="pt-form-group">
-                  <label className="pt-label">Password</label>
-                  <div className="pt-form-content">
-                    <div className="pt-input-group">
-                      <span className="pt-icon pt-icon-lock"></span>
-                      <input className="pt-input" type="password" dir="auto"/>
-                    </div>
-                    <div className="pt-form-helper-text">This is your password.</div>
-                  </div>
-                </div>
-                <div className="pt-form-group">
-                  <div className="pt-form-content">
-                    <button className="pt-button pt-intent-success">
-                      Sign in
-                      <span className="pt-icon-standard pt-icon-arrow-right pt-align-right"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div style={{ marginTop: '-20px' }}>
+            <FormLayout
+              avatar={<Avatar url="/static/images/flower-heart-love-romance.png" alt="avatar" />}
+            >
+              <Header
+                title="Sign in to Life Story"
+                subTitle="Come with us :)"
+              />
+              <Input
+                label="Username"
+                inputIcon="pt-icon pt-icon-person"
+                inputType="text"
+                inputClass="pt-input"
+                helperText="This is your username."
+              />
+              <Input
+                label="Password"
+                inputIcon="pt-icon pt-icon-lock"
+                inputType="password"
+                inputClass="pt-input"
+                helperText="This is your password."
+              />
+              <Button
+                className="pt-button pt-intent-success"
+                content="Sign in"
+                icon="pt-icon-standard pt-icon-arrow-right pt-align-right"
+              />
+            </FormLayout>
           </div>
         </Layout>
-
-        <style jsx>{`
-          .sign-in-modal {
-            padding-top: 60px;
-            display: table;
-            position: absolute;
-            width: 100%;
-          }
-
-          .middle {
-            display: table-cell;
-            vertical-align: middle;
-          }
-
-          .modal-content {
-            margin-left: auto;
-            margin-right: auto; 
-            width: 23%;            
-          }
-
-          .avatar {
-            text-align: center;
-            margin: 24px 0 12px 0;
-          }
-
-          input {
-            width: 100%;
-          }
-
-          .text-center {
-            text-align: center;
-          }
-        `}</style>
       </div>
     );
   }

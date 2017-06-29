@@ -1,7 +1,7 @@
 {
-  "name": "next-news",
+  "name": "next-blog",
   "version": "1.0.0",
-  "description": "Hacker News build in Next.js",
+  "description": "Blog build in Next.js",
   "main": "server.js",
   "author": "Vuong Vu <vuongvu333@gmail.com>",
   "license": "MIT",
@@ -16,13 +16,16 @@
     "mongoose": "^4.11.0",
     "next": "^2.4.5",
     "nprogress": "^0.2.0",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
     "react-dom": "^15.6.1",
     "styled-jsx": "^1.0.7"
   },
   "devDependencies": {
-    "eslint": "^4.1.1"
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.1.1",
+    "eslint-plugin-react": "^7.1.0"
   },
   "engines": {
     "node": "8.0.0",

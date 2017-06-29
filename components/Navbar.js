@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import NavItem from './NavItem';
 
 export default () => (
   <nav className="pt-navbar pt-fixed-top pt-dark">
@@ -39,10 +39,4 @@ export default () => (
       </NavItem>
     </div>
   </nav>
-);
-
-const NavItem = ({ href, className, children }) => (
-  <Link href={href}>
-    <button className={className}>{children}</button>
-  </Link>
 );

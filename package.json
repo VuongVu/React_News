@@ -6,12 +6,13 @@
   "author": "Vuong Vu <vuongvu333@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@blueprintjs/core": "^1.21.0",
+    "express": "^4.15.3",
     "mongodb": "^2.2.29",
     "mongoose": "^4.11.0",
     "next": "^2.4.5",

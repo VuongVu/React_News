@@ -33,6 +33,7 @@ app.prepare()
 
     // Parsers for POST data
     server.use(bodyParser.json());
+    server.use(bodyParser.urlencoded({ extended: true }));
 
     // Parser Cookie
     server.use(cookieParser('Next Blog'));

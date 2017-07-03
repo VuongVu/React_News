@@ -42,6 +42,7 @@ export default class extends Component {
               helperText="This will be your password."
             />
             <Button
+              type="submit"
               className="pt-button pt-intent-success"
               content="Create an account"
               icon="pt-icon-standard pt-icon-arrow-right pt-align-right"
